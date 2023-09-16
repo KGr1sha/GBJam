@@ -16,9 +16,4 @@ public class RoverInput : MonoBehaviour
         input = new Vector2(horizontalInput, verticalInput).normalized;
         return input;
     }
-
-    public bool IsSpacePressed()
-    {
-        return Input.GetKeyDown(KeyCode.Space);
-    }
 }
