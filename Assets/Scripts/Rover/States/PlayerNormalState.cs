@@ -14,7 +14,7 @@ public class PlayerNormalState : PlayerBaseState
     public override void UpdateState(PlayerStateManager player)
     {
         GetInput();
-        CheckForCrystal();
+
     }
 
     public override void FixedUpdateState(PlayerStateManager player, Rigidbody2D rb)
@@ -28,10 +28,5 @@ public class PlayerNormalState : PlayerBaseState
         float verticalInput = Input.GetAxisRaw("Vertical");
 
         inputVector = new Vector2(horizontalInput, verticalInput).normalized;
-    }
-
-    private void CheckForCrystal()
-    {
-
     }
 }
