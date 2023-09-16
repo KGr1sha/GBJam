@@ -24,6 +24,6 @@ public class RoverMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        roverRigidbody.MovePosition(roverRigidbody.position + inputDirection * moveSpeed * Time.fixedDeltaTime);
+        roverRigidbody.MovePosition(roverRigidbody.position + moveSpeed * Time.fixedDeltaTime * inputDirection);
     }
 }
