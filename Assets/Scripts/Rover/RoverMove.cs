@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.XR;
 using UnityEngine;
 
 public class RoverMove : MonoBehaviour
@@ -9,6 +10,13 @@ public class RoverMove : MonoBehaviour
 
     private RoverInput inputScript;
     private Vector2 inputDirection;
+
+    private bool isMining;
+
+    public void SetMiningState(bool x)
+    {
+        isMining = x;
+    }
 
     private void Start()
     {
@@ -24,6 +32,7 @@ public class RoverMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        roverRigidbody.MovePosition(roverRigidbody.position + moveSpeed * Time.fixedDeltaTime * inputDirection);
+        if(isMining == false)
+            roverRigidbody.MovePosition(roverRigidbody.position + moveSpeed * Time.fixedDeltaTime * inputDirection);
     }
 }
