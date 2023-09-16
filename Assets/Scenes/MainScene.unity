@@ -2404,6 +2404,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rover
       objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: caad173eb7ac49447893de655a3c754e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: caad173eb7ac49447893de655a3c754e, type: 3}
       propertyPath: m_RootOrder
       value: 2
