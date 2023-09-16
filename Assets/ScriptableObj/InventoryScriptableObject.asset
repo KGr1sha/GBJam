@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24fb27c86a2810e4ba2568d84a1379e2, type: 3}
   m_Name: InventoryScriptableObject
   m_EditorClassIdentifier: 
-  CountOfUpdateMaterial: 0
-  CountOfFirstMaterial: 0
-  CountOfSecondMaterial: 0
+  CountOfUpdateMaterial: 2
+  CountOfFirstMaterial: 2
+  CountOfSecondMaterial: 3
   CountOfThirdMaterial: 0
