@@ -24,7 +24,7 @@ public class PlayerStateManager : MonoBehaviour
     public GameObject GetMineral()
     {
         var hit = Physics2D.BoxCast(drillCollider.bounds.center, drillCollider.bounds.size, transform.eulerAngles.z, transform.forward, 0f, mineralMask);
-        if (hit.transform.CompareTag("Mineral"))
+        if (hit.transform.CompareTag("Mineral")) // to-do: check with interface
             return hit.transform.gameObject;
         return null;
     }
