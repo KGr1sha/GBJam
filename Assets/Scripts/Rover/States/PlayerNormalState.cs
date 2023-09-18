@@ -15,6 +15,8 @@ public class PlayerNormalState : PlayerBaseState
     {
         GetInput();
 
+        if (inputVector != Vector2.zero)
+            player.transform.up = inputVector;
     }
 
     public override void FixedUpdateState(PlayerStateManager player, Rigidbody2D rb)
