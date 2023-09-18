@@ -8,8 +8,8 @@ public class PlayerMiningState : PlayerBaseState
 
     public override void EnterState(PlayerStateManager player)
     {
-        Debug.Log("MINING!!!");
         mineral = player.GetMineral();
+        Debug.Log("Mining " + mineral.tag);
     }
 
     public override void UpdateState(PlayerStateManager player)
