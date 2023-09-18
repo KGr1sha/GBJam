@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerNormalState : PlayerBaseState
@@ -14,9 +12,14 @@ public class PlayerNormalState : PlayerBaseState
     public override void UpdateState(PlayerStateManager player)
     {
         GetInput();
-
+        
+        //Rotate
         if (inputVector != Vector2.zero)
             player.transform.up = inputVector;
+
+        //Switch to mining state
+        if (Input.GetKeyDown(KeyCode.Space))
+            player.SwitchState(player.MiningState);
     }
 
     public override void FixedUpdateState(PlayerStateManager player, Rigidbody2D rb)
