@@ -33577,6 +33577,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 999322363850383153, guid: 989123c4471ab7a48886260775694e38, type: 3}
+      propertyPath: mineralName
+      value: gem1
+      objectReference: {fileID: 0}
     - target: {fileID: 1727565624059074977, guid: 989123c4471ab7a48886260775694e38, type: 3}
       propertyPath: m_Name
       value: diamond
@@ -33724,7 +33728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f368f3517ce7fdc499e0b8c4483b93c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
+  inventory: {fileID: 11400000, guid: 53d34d16bb94d8c4b8f1d5f02ae4cd9a, type: 2}
 --- !u!1 &1262341255
 GameObject:
   m_ObjectHideFlags: 0
