@@ -3,11 +3,12 @@ using UnityEngine;
 
 public class Mineral : MonoBehaviour, IMinable
 {
-    public delegate void OnMineralMined(string mineralName);
+    public delegate void OnMineralMined(string mineralName, int amount);
     public static OnMineralMined onMineralMined;
 
     [SerializeField] private int maxHealth;
     [SerializeField] private string mineralName;
+    [SerializeField] private int gemsToGive;
     private int health;
     private bool isBeingMined;
 
@@ -23,7 +24,7 @@ public class Mineral : MonoBehaviour, IMinable
         if (health <= 0)
         {
             Destroy(this.gameObject);
-            onMineralMined?.Invoke(mineralName);
+            onMineralMined?.Invoke(mineralName, gemsToGive);
         }
     }
 
