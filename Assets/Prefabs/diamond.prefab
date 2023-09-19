@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
-  mineralName: diamond
+  mineralName: gem1
   gemsToGive: 1
 --- !u!61 &8675770756391973640
 BoxCollider2D:

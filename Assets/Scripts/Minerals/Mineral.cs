@@ -32,7 +32,6 @@ public class Mineral : MonoBehaviour, IMinable
     {
         StartCoroutine(MiningTimer());
         isBeingMined = true;
-        Debug.Log("Mining " + mineralName);
     }
 
     public void StopMining()
