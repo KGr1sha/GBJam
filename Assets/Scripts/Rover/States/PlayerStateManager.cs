@@ -6,10 +6,12 @@ public class PlayerStateManager : MonoBehaviour
 {
     //States
     private PlayerBaseState currentState;
-    public PlayerNormalState NormalState = new PlayerNormalState();
-    public PlayerMiningState MiningState = new PlayerMiningState();
+    public PlayerNormalState NormalState = new ();
+    public PlayerMiningState MiningState = new ();
 
     //Other
+    public BoxCollider2D DrillCollider;
+    public LayerMask MineralMask;
     private Rigidbody2D rb;
     public float MoveSpeed = 0.8f;
 
