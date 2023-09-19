@@ -29,21 +29,21 @@ public class Inventory : MonoBehaviour
         inventory.gem3 = 0;
     }
 
-    private void AddItem(string itemName)
+    private void AddItem(string itemName, int amount)
     {
         switch (itemName)
         {
             case "gem1":
-                inventory.gem1 += 1;
+                inventory.gem1 += amount;
                 uiPanel.SetInventoryCount(inventory.gem1);
                 break;
 
             case "gem2":
-                inventory.gem2 += 1;
+                inventory.gem2 += amount;
                 break;
 
             case "gem3":
-                inventory.gem3 += 1;
+                inventory.gem3 += amount;
                 break;
         }
     }
