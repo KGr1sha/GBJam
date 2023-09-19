@@ -9,12 +9,15 @@ public class Mineral : MonoBehaviour, IMinable
     [SerializeField] private int maxHealth;
     [SerializeField] private string mineralName;
     [SerializeField] private int gemsToGive;
+
+    private Animator animationController;
     private int health;
     private bool isBeingMined;
 
     private void Start()
     {
         health = maxHealth;
+        animationController = GetComponent<Animator>();
     }
 
     public void TakeDamage(int amount)
@@ -32,11 +35,15 @@ public class Mineral : MonoBehaviour, IMinable
     {
         StartCoroutine(MiningTimer());
         isBeingMined = true;
+        animationController.speed = 1;
+        animationController.SetTrigger("IsMining");
     }
 
     public void StopMining()
     {
         isBeingMined = false;
+        if (animationController != null)
+            animationController.speed = 0;
     }
 
     private IEnumerator MiningTimer()
