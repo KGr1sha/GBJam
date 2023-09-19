@@ -10,6 +10,7 @@ public class PlayerStateManager : MonoBehaviour
     public PlayerMiningState MiningState = new ();
 
     //Other
+    public Animator Animator { get; private set; }
     public BoxCollider2D DrillCollider;
     public LayerMask MineralMask;
     private Rigidbody2D rb;
@@ -25,6 +26,7 @@ public class PlayerStateManager : MonoBehaviour
     {
         currentState = NormalState;
         rb = GetComponent<Rigidbody2D>();
+        Animator = GetComponent<Animator>();
     }
 
     private void Update()
