@@ -29,15 +29,14 @@ public class Mineral : MonoBehaviour, IMinable
 
     public void StartMining()
     {
-        Debug.Log("Mining " + mineralName);
         StartCoroutine(MiningTimer());
         isBeingMined = true;
+        Debug.Log("Mining " + mineralName);
     }
 
     public void StopMining()
     {
         isBeingMined = false;
-        Debug.Log("Not mining");
     }
 
     private IEnumerator MiningTimer()
