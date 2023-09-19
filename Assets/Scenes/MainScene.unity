@@ -58757,13 +58757,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 999322363850383153, guid: 989123c4471ab7a48886260775694e38, type: 3}
+      propertyPath: mineralName
+      value: gem1
+      objectReference: {fileID: 0}
     - target: {fileID: 1727565624059074977, guid: 989123c4471ab7a48886260775694e38, type: 3}
       propertyPath: m_Name
       value: diamond
       objectReference: {fileID: 0}
     - target: {fileID: 2273175187754967269, guid: 989123c4471ab7a48886260775694e38, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -58855,7 +58859,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.00022345036, y: 0.05698122}
@@ -58871,6 +58875,40 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.10324223, y: 0.046037555}
   m_EdgeRadius: 0
+--- !u!95 &1231150475
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168095032}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7803b7bc9d2115d44b723ce0dc5925f0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1231150476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168095032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f368f3517ce7fdc499e0b8c4483b93c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 11400000, guid: 53d34d16bb94d8c4b8f1d5f02ae4cd9a, type: 2}
 --- !u!1 &1262341255
 GameObject:
   m_ObjectHideFlags: 0
@@ -60010,6 +60048,10 @@ PrefabInstance:
       propertyPath: mineralMask.m_Bits
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7774448430402918420, guid: 6e6a53b1a5b63bc448658ef742a5738d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 9090372051933943309, guid: 6e6a53b1a5b63bc448658ef742a5738d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -60024,4 +60066,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9090372051933943309, guid: 6e6a53b1a5b63bc448658ef742a5738d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1231150470}
+    - targetCorrespondingSourceObject: {fileID: 9090372051933943309, guid: 6e6a53b1a5b63bc448658ef742a5738d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1231150476}
+    - targetCorrespondingSourceObject: {fileID: 9090372051933943309, guid: 6e6a53b1a5b63bc448658ef742a5738d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1231150475}
   m_SourcePrefab: {fileID: 100100000, guid: 6e6a53b1a5b63bc448658ef742a5738d, type: 3}

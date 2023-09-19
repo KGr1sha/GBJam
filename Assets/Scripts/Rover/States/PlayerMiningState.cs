@@ -10,7 +10,8 @@ public class PlayerMiningState : PlayerBaseState
     public override void EnterState(PlayerStateManager player)
     {
         mineral = GetMineral(player);
-        mineral?.StartMining();        
+        mineral?.StartMining();
+        player.Animator.SetBool("IsMining", true);
     }
 
     public override void UpdateState(PlayerStateManager player)
@@ -19,6 +20,7 @@ public class PlayerMiningState : PlayerBaseState
         if (Input.GetKeyUp(KeyCode.Space))
         {
             player.SwitchState(player.NormalState);
+            player.Animator.SetBool("IsMining", false);
             if (mineral != null)
                 mineral.StopMining();
         }
