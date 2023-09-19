@@ -10,8 +10,8 @@ public class PlayerStateManager : MonoBehaviour
     public PlayerMiningState MiningState = new ();
 
     //Other
-    [SerializeField] private BoxCollider2D drillCollider;
-    [SerializeField] private LayerMask mineralMask;
+    public BoxCollider2D DrillCollider;
+    public LayerMask MineralMask;
     private Rigidbody2D rb;
     public float MoveSpeed = 0.8f;
 
@@ -19,15 +19,6 @@ public class PlayerStateManager : MonoBehaviour
     {
         newState.EnterState(this);
         currentState = newState;
-    }
-
-    public GameObject GetMineral()
-    {
-        var hit = Physics2D.BoxCast(drillCollider.bounds.center, drillCollider.bounds.size, transform.eulerAngles.z, transform.forward, 0f, mineralMask);
-
-        if (hit && hit.transform.CompareTag("Mineral")) // to-do: check with interface
-            return hit.transform.gameObject;
-        return null;
     }
 
     private void Start()
